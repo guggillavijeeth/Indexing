@@ -118,9 +118,26 @@ public class IndexBuilder {
 	
 	private void printIndex() {
 		Iterator<PageTopicPair> itr = indexTree.iterator();
+		String currentTopic = "";
+		String activeTopic = "";
+		String currentSubTopic = "";
+		String activeSubTopic = "";
 		while(itr.hasNext()) {
 			PageTopicPair p = itr.next();
-			System.out.println("Topic: "+p.getTopic()+" Page: "+p.getPage()+" Subtopic: "+p.getSubTopic());
+			currentTopic = p.getTopic();
+			currentSubTopic = p.getSubTopic();
+			String currentPage = p.getPage();
+			if(!currentTopic.equals(activeTopic)) {
+				System.out.println();
+				System.out.print(currentTopic);
+				activeTopic = currentTopic;
+			}
+			if((!currentSubTopic.equals(activeSubTopic))&&(!currentSubTopic.equals(""))){
+				System.out.println();
+				System.out.print("    "+currentSubTopic);
+				activeSubTopic = currentSubTopic;
+			}
+			System.out.print(", "+currentPage);
 		}
 	}
 	
