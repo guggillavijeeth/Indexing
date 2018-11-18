@@ -1,3 +1,5 @@
+//TODO: Print in right way (pages are strings now so it's just the print formatting)
+
 package indexing;
 
 import java.io.File;
@@ -95,12 +97,12 @@ public class IndexBuilder {
 	
 	private static PageTopicPair parse(String s) {
 		
-		Integer page; String topic; String subTopic = "";
+		String page = ""; String topic = ""; String subTopic = "";
 		
 		String[] strArr = s.split(": ", 0);
 		//System.out.println(strArr[0]);
 		//System.out.println(strArr[1]);
-		page = Integer.parseInt(strArr[0]);
+		page = strArr[0].trim();
 		
 		String[] strArr2 = strArr[1].split("/", 0);
 		//System.out.println(strArr2[0]);

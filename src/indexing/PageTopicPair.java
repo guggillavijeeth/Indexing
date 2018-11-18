@@ -4,17 +4,17 @@ public class PageTopicPair implements Comparable<PageTopicPair>{
 
 	// implements Comparable<PageTopicPair>
 
-	private Integer page;
+	private String page;
 	private String topic;
 	private String subTopic;
 
-	public PageTopicPair(Integer pageInput, String topicInput, String subTopicInput) {
+	public PageTopicPair(String pageInput, String topicInput, String subTopicInput) {
 		page = pageInput;
 		topic = topicInput;
 		subTopic = subTopicInput;
 	}
 
-	public Integer getPage(){
+	public String getPage(){
 		return page;
 	}
 

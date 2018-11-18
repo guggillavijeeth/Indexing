@@ -12,13 +12,13 @@ public class IndexTester {
 		i.index(f);
 		
 		
-		
+		/*
 		PageTopicPair p1 = new PageTopicPair(100, "Subtraction", "floating-point");
 		PageTopicPair p2 = new PageTopicPair(178, "Subtraction", "");
 		System.out.println("Final: "+p2.compareTo(p1));
 		PageTopicPair p3 = new PageTopicPair(214, "Subtraction", "floating-point");
 		System.out.println("Final2: "+p2.compareTo(p3));
-		
+		*/
 		
 	}
 	
