@@ -79,7 +79,11 @@ public class PageTopicPair implements Comparable<PageTopicPair>{
 		}
 
 		int subTopicComparison = this.getSubTopic().compareTo(rhs.getSubTopic());
-		int pageComparison = this.getPage().compareTo(rhs.getPage());
+		
+		Integer page = Integer.parseInt(this.getPage().split("-",0)[0]);
+		Integer rhsPage = Integer.parseInt(rhs.getPage().split("-", 0)[0]);
+		
+		int pageComparison = page.compareTo(rhsPage);
 
 		if(topicComparison == 0){
 			if((subTopicComparison == 0)){
